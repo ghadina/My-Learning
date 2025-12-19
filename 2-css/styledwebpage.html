@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title>Webpage with styles</title>
+
+        <style type="text/css">
+
+            p{
+                color: red;
+                font-size: 200%;
+            }
+
+            h1{
+                color: blue;
+            }
+
+            .yellow{
+                color: yellow;
+            }
+
+            #green{
+                color: green;
+            }
+
+            .underlined {
+                text-decoration: underline;
+            }
+
+            #first-div {
+                background-color: black;
+                width: 50%;
+            }
+
+            #floatleft{
+                background-color: black;
+                width: 50%;
+                float: left;
+                border: 2px solid;
+                border-color: red;
+            }
+
+            #floatright{
+                background-color: black;
+                width: 50%;
+                float: right;
+                border: 2px solid;
+                border-color: red;
+            }
+
+            .clear-float {
+                clear: both;
+            }
+
+            #rel-position {
+                background-color: black;
+                width: 50%;
+                border: 2px solid;
+                border-color: red;
+                position: relative;
+                left: 100px;
+
+            }
+            .z-index1 {
+                position: relative;
+                z-index: 2;
+                opacity: 0.5;
+            }
+            .z-index2 {
+                position: relative;
+                top: -80px;
+                background-color: brown;
+                z-index: 1;
+            }
+
+            #square-red {
+                background-color: red;
+            }
+            #square-blue {
+                background-color: blue;
+            }
+            #square-green {
+                background-color: green;
+            }
+
+            .square {
+                width: 100px;
+                height: 100px;
+                margin: 40px;
+                float: left;
+                border: 10px yellow solid;
+                border-style: dashed dotted solid ridge;
+                border-width: 10px, 5px, 2px, 1px;
+                border-radius: 20px;
+
+                
+            }
+
+            
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <h1>Inline CSS</h1>
+
+        <p style="color: blue; font-size: 200%;">The quick brown fox jumped over the lazy dog</p>
+        <h1 style="color: green; font-size: 50%;">CSS is cool!</h1>
+
+        <h1>Internal CSS</h1>
+
+        <p>The quick brown fox jumped over the lazy dog</p>
+
+        <h1>Classes and IDs</h1>
+
+        <div id="first-div">
+            <p class="yellow">The quick brown fox jumped over the lazy dog</p>
+            <p id="green">The quick brown fox <span class="underlined">jumped over the lazy dog</span></p>
+        </div>  
+
+        <h1>Positioning</h1>
+        <h2>Floating</h2>
+        <div id="floatleft">
+            <p class="yellow">The quick brown fox jumped over the lazy dog</p>
+            <p id="green">The quick brown fox <span class="underlined">jumped over the lazy dog</span></p>
+        </div>  
+
+        <div id="floatright">
+            <p class="yellow">The quick brown fox jumped over the lazy dog</p>
+            <p id="green">The quick brown fox <span class="underlined">jumped over the lazy dog</span></p>
+        </div>  
+
+        <p>This paragraph is not floated</p>
+        <div class="clear-float"></div>
+        <h3>Use clear float to create the next item free from the previously added float</h3>
+        
+        <h1>Relative Positioning</h1>
+        <div id="rel-position">
+            <p class="yellow">The quick brown fox jumped over the lazy dog</p>
+            <p id="green">The quick brown fox <span class="underlined">jumped over the lazy dog</span></p>
+        </div>  
+
+        <div id="rel-position" class="z-index1">
+            <h1>Z-index</h1>
+            <h1>Z-index 1</h1>
+            <div>
+                <p class="yellow">The quick brown fox jumped over the lazy dog</p>
+                <p id="green">The quick brown fox <span class="underlined">jumped over the lazy dog</span></p>
+            </div> 
+        </div>
+        
+        <div class="z-index2"> 
+            <h1>Z-index 2</h1>
+            <div>
+                <p class="yellow">The quick brown fox jumped over the lazy dog</p>
+                <p id="green">The quick brown fox <span class="underlined">jumped over the lazy dog</span></p>
+            </div>
+        </div>  
+
+        <h1>Absolute Positioning</h1>
+        <p>Ignores the flow of the page entirely but moves with the page, it is relative to the top left of the page</p>
+        
+        <h1>fixed Positioning</h1>
+        <p>Ignores the flow of the page entirely and does not move with the page, keeps the element fixed even when scrolling</p>
+
+        <h1>Sticky Positioning</h1>
+        <p>Ignores the flow of the page entirely and does not move with the page just like fixed, works like relative until scrolled past a certain threshold which is then treated as fixed</p>
+
+        <h1>Static Positioning</h1>
+        <p>This is the default value an element would have if you don't declare a position value for it and may be used to forcefully remove other positioning.</p>
+
+        <h1>Margin</h1>
+        <p>To add outter spaces to the element. Can be added individual, or grouped</p>
+
+        <h1>Paddings</h1>
+        <p>Padding adds inner spacings</p>
+        <p>To remove preset or default margin/padding within the page set them to 0 from the body </p>
+        <p>Read more on CSS reset</p>
+
+        <h1>borders</h1>
+        <div id="square-red" class="square"></div>
+        <div id="square-blue" class="square"></div>
+        <div id="square-green" class="square"></div>
+
+    </body>
+
+</html>
