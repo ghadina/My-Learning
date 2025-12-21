@@ -3,6 +3,12 @@
     <head>
 
         <title>Webpage with styles</title>
+        
+        <link rel="stylesheet" href="normalize.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap" rel="stylesheet">
 
         <style type="text/css">
 
@@ -96,7 +102,107 @@
                 
             }
 
-            
+            body {
+
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, "Google Sans", 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+                font-optical-sizing: auto;
+                
+            }
+
+            .font-styling {
+                font-weight: bold;
+                font-style: italic;
+                text-decoration: underline;
+            }
+
+            .text-align-right {
+                text-align: right;
+                
+            }
+
+            .text-align-left {
+                text-align: left;
+                
+            }
+
+            .text-align-center {
+                text-align: center;
+                
+            }
+
+            .text-align-justified {
+                text-align: justify;
+            }
+
+            #gradient {
+                width: 500px;
+                height: 100px;
+                background: linear-gradient(white, blue);
+            }
+
+            #shadow {
+                text-shadow: 2px 2px 4px green;
+            }
+
+            #shadow-without-fill {
+                text-shadow: 2px 2px 4px green;
+                color: white;
+
+            }
+
+            #shadow-without-glow {
+                text-shadow: 0 0 10px red;
+            }
+
+            #box-shadow {
+                width: 200px;
+                height: 200px;
+                background-color: yellow;
+                box-shadow: 3px 3px 30px yellowgreen;
+            }
+
+            #trans-box{
+                width: 100px;
+                height: 100px;
+                background-color: red;
+                border-radius: 10px;
+                transition: 1s ease-in-out;
+            }
+
+            #trans-box:hover {
+                transform: translate(0px, 50px);
+            }
+
+            #trans-box-3d {
+                width: 100px;
+                height: 100px;
+                background-color: red;
+                border-radius: 10px;
+                transition: 1s ease-in-out;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 200%;
+            }
+
+            #trans-box-3d:hover {
+                transform: rotateY(360deg);
+
+            }
+
+            .flex-box-cont {
+                display: flex;
+                width: 100%;
+                height: 200px;
+                background-color: aqua;
+                flex-direction:row;
+            }
+            .flex-box {
+                background-color: antiquewhite;
+                width: 100px;
+                height: 100px;
+                margin: 10px;
+            }
 
         </style>
 
@@ -183,6 +289,124 @@
         <div id="square-red" class="square"></div>
         <div id="square-blue" class="square"></div>
         <div id="square-green" class="square"></div>
+
+        <div class="clear-float"></div>
+
+        <h1>Fonts</h1>
+
+        <p>fonts can selected using 'font-family' styled using 'font-style'</p>
+        <p>Search for web safe fonts W3schools to see fonts tht most browsers support</p>
+        <p>Font fallback used when the selected font is not avaiable</p>
+        <p>Use google fonts to select font-family </p>
+
+        <h1>Styling Text</h1>
+
+        <p class="font-styling">This is a practice paragraph</p>
+        <p>Set the text decoration to none if you don't want your links to be underlined</p>
+        <p>pseudo selectors like a:hover can be used to set decorations when hovered.</p>
+        <p>For additional information, visit CSS styling text on W3schools to learn more.</p>
+
+        <h1>Aligning Text</h1>
+        <p>To have our texts left, right, center, or justified accross our page</p>
+        <p class="text-align-right">This is a practice paragraph</p>
+        <p class="text-align-left">This is a practice paragraph</p>
+        <p class="text-align-center">This is a practice paragraph</p>
+        <p class="text-align-justified">This is a practice paragraph for justified text, its aligns the text to the full width of the page
+            This is a practice paragraph for justified text, its aligns the text to the full width of the page
+            This is a practice paragraph for justified text, its aligns the text to the full width of the page
+            This is a practice paragraph for justified text, its aligns the text to the full width of the page
+            This is a practice paragraph for justified text, its aligns the text to the full width of the page
+            This is a practice paragraph for justified text, its aligns the text to the full width of the page
+            This is a practice paragraph for justified text, its aligns the text to the full width of the page
+            This is a practice paragraph for justified text, its aligns the text to the full width of the page
+            This is a practice paragraph for justified text, its aligns the text to the full width of the page
+        </p>
+
+        <h1>Styling Links</h1>
+        <p>Use pseudo classes to access links and add decorations 'a:hover', 'a:visited'</p>
+        <p>To open links in a new tab add a target='blank', as an attribute to the link tag.</p>
+        <p> <a href="https://www.google.com" target="blank">Link</a></p>
+        <p>Read more on W3 schools</p>
+
+        <h1>Advanced Element Selector</h1>
+        <p class="">Used to select element within another element like; <br> 
+            paragraphs within a div can be selected using div p.
+        </p>
+        <h3>Sibling elements</h3>
+        <p>h3 ~ p will select all the paragraphs within an h3 elemtent 
+            and vice versa to select a h3 element following a paragraph</p>
+        <p>a[target] can be used to select and decorate elements with the target attribute a[links.com], etc.</p>
+        
+        <h1>Pseudo Classes</h1>
+        <p>Can also be used to selct inputs like input:focus, input:enabled, input:disabled </p>
+
+        <p>The 'first-child selector can be used to select the first element e.g p:first-child selects the first paragraph within that element, 'p:last-child',
+            p:only-child, p:first-of-type, etc.
+        </p>
+
+        <p>div:empty to select empty divs, p:not(.green) to select elements that are not a class of green, not:(div), p:first-letter, a:after</p>
+
+        <h1>Gradients</h1>
+        <div id="gradient"></div>
+        <p>background: linear-gradient(white, blue); background: linear-gradient( to right, white, blue);
+            background: linear-gradient( to top left, white, blue); background: linear-gradient(to buttom right, white, blue);
+
+            background: radial-gradient(white, blue);
+        </p>
+
+        <h1>Shadow Effect</h1>
+
+        <h2 id="shadow">This is a text shadow with effect and blur</h2>
+
+        <h2 id="shadow-without-fill">This is a text shadow with effect and blur and no fill</h2>
+
+        <h2 id="shadow-without-glow">This is a text shadow with effect and blur and glow</h2>
+
+        <h3>Box Shadow</h3>
+        <div id="box-shadow"></div>
+
+        <h1>Transformations and Animations</h1>
+
+        <div id="trans-box"></div>
+        <h3>2d Transformations</h3>
+        <p>transition: 1s ease-in-out; linear...</p>
+        <p>transform: translate(0px, 50px); transform: rotate(50deg); transform: scale(0px, 50px);
+            transform: skew(0deg, 50deg)
+        </p>
+
+        <h3>3d Transformations</h3>
+        <div id="trans-box-3d">Box</div>
+        <p> transform: rotateY(360deg);
+            transform: rotate(360deg);
+            transform: rotateX(360deg);
+            transform: rotateZ(360deg);
+
+        </p>
+
+        <h1>Flex box</h1>
+        <p>This is helpful when you want the content of your page to be the same size across differenr screens</p>
+        <p> display: flex;
+            flex-direction:row;
+            flex-direction:column;
+            flex-direction:wrap;
+        </p>
+
+        <div class="flex-box-cont">
+            <div class="flex-box">Item 1</div>
+            <div class="flex-box">Item 2</div>
+            <div class="flex-box">Item 3</div>
+            <div class="flex-box">Item 5</div>
+            <div class="flex-box">Item 6</div>
+            <div class="flex-box">Item 7</div>
+            <div class="flex-box">Item 8</div>
+            <div class="flex-box">Item 9</div>
+            <div class="flex-box">Item 10</div>
+            
+        </div>
+
+        <h1>CSS Reset</h1>
+        <p>Used to reset CSS styles to be uniform in several browsers, download normalize.css code</p>
+
 
     </body>
 
